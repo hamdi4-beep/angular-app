@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-    .fetchData('http://api.github.com/users/hamdi4-beep')
+    .fetchData('https://api.github.com/users/hamdi4-beep')
     .subscribe(data => this.user = data)
   }
 }

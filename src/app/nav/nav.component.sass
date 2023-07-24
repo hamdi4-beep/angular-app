@@ -1,0 +1,14 @@
+nav
+    margin-bottom: 2em
+
+    ul
+        display: flex
+        list-style: none
+
+        li:not(:last-of-type)::after
+            content: '—'
+            display: inline-block
+            padding-inline: .5em
+
+        a.active-link
+            font-weight: bold

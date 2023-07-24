@@ -1,0 +1,10 @@
+<div class="user" *ngIf="user">
+    <div class="user-img">
+        <img src={{user.avatar_url}} alt="an image of {{user.name}}">
+    </div>
+
+    <div class="user-info">
+        <h3>{{user.login}}</h3>
+        <p>{{user.name}}</p>
+    </div>
+</div>

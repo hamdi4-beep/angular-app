@@ -1,7 +1,5 @@
 import {
   Component,
-  ViewChild,
-  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -10,10 +8,9 @@ import {
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent {
-  @ViewChild('loadingSpinner') spinnerRef!: ElementRef
+  isAnimationPaused = false
 
   handleClick(e: Event) {
-    const spinnerEl = this.spinnerRef.nativeElement as HTMLDivElement
-    spinnerEl.classList.toggle('pause-animation')
+    this.isAnimationPaused = !this.isAnimationPaused
   }
 }

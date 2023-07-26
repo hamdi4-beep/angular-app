@@ -5,5 +5,5 @@
 </div>
 
 <p>Here's a list of CSS loading spinners I'm currently working on:</p>
-<div class="spinner" style="margin-block: .5em;" #loadingSpinner></div>
+<div [class.pause-animation]="isAnimationPaused" class="spinner" style="margin-block: .5em;" #loadingSpinner></div>
 <button (click)="handleClick($event)">Pause / Play</button>

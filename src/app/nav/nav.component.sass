@@ -1,14 +1,19 @@
 nav
+    padding-bottom: 1em
     margin-bottom: 2em
+    border-bottom: 1px solid #000
 
     ul
         display: flex
+        justify-content: right
         list-style: none
 
-        li:not(:last-of-type)::after
-            content: '—'
-            display: inline-block
-            padding-inline: .5em
+        li
+            margin-right: 1.5em
+
+            &:last-of-type
+                margin-right: 0
 
         a.active-link
             font-weight: bold
+                

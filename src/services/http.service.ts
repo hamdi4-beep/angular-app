@@ -6,9 +6,14 @@ import { HttpClient} from '@angular/common/http'
 })
 export class HttpService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
 
-  fetchData(endpoint: string) {
-    return this.http.get(endpoint)
+  }
+
+  fetchData(
+    endpoint: string,
+    cb: (v: Object) => void
+  ) {
+    return this.http.get(endpoint).subscribe(cb)
   }
 }

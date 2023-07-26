@@ -3,7 +3,7 @@ import {Component} from '@angular/core'
 @Component({
     selector: 'app-root',
     styleUrls: [
-        'app.component.sass'
+        './app.component.sass'
     ],
     template: `
         <div class="wrapper">

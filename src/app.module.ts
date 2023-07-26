@@ -13,13 +13,15 @@ import { UserComponent } from './app/user/user.component';
 
 // services
 import { HttpService } from './services/http.service';
+import { AboutComponent } from './app/about/about.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavComponent,
         UserComponent,
-        NotfoundComponent
+        NotfoundComponent,
+        AboutComponent
     ],
     providers: [
         HttpService
@@ -32,6 +34,7 @@ import { HttpService } from './services/http.service';
             {path: '', redirectTo: '/home', pathMatch: 'full'},
             {path: 'home', component: HomeComponent},
             {path: 'profile', component: UserComponent},
+            {path: 'about', component: AboutComponent},
             {path: '**', component: NotfoundComponent}
         ])
     ],

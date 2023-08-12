@@ -1,6 +1,13 @@
-.wrapper
-    width: 100
-    max-width: 48rem
-    padding: 2em
-    margin-bottom: 2em
-    margin-inline: auto
+.mat-grid-list
+    justify-self: center
+
+    .mat-grid-tile
+        background: #E6E6E6
+        transition: all 300ms ease
+
+        button:not(:last-of-type)
+            margin-right: 1em
+            display: inline-block
+
+        &.main-section
+            background: white

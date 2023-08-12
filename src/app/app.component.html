@@ -1,0 +1,29 @@
+<mat-grid-list cols="3" [rowHeight]='rowHeight + "rem"'>
+    <mat-grid-tile rowspan="2" class="main-section">
+        <button
+            class="md-padding"
+            mat-raised-button
+            (click)="handleClick()"
+            color="primary"
+        >Default</button>
+
+        <button mat-stroked-button>Stroked</button>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="shouldSpan ? 2 : 1">
+        <mat-slide-toggle checked (change)="handleToggleChange()">Toggle</mat-slide-toggle>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <form action="#" (submit)="handleSubmit($event)">
+            <mat-form-field>
+                <mat-label>Row Height (in rem)</mat-label>
+                <input matInput name="rowheight" [value]="rowHeight">
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="shouldSpan ? 1 : 2">
+        <app-thumbnail></app-thumbnail>
+    </mat-grid-tile>
+</mat-grid-list>
